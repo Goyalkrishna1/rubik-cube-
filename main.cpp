@@ -1,7 +1,5 @@
 #include "bits/stdc++.h"
-
 using namespace std;
-
 #include "Model/RubiksCube3dArray.cpp"
 #include "Model/RubiksCube1dArray.cpp"
 #include "Solver/DFSSolver.h"
@@ -24,7 +22,6 @@ int main() {
 
     int option;
     cin >> option;
-
     if (option == 1) {
         CornerPatternDatabase cornerDB;
         RubiksCubeBitboard cube;
@@ -41,17 +38,6 @@ int main() {
         cornerDB.setNumMoves(cube, 6);
         cout << "Updated Number of Moves: " << (int) cornerDB.getNumMoves(cube) << "\n";
     } else if (option == 2) {
-        RubiksCube3dArray cube;
-        cube.print();
-
-        cout << "Enter the number of shuffling moves: ";
-        int numShuffleMoves;
-        cin >> numShuffleMoves;
-
-        vector<GenericRubiksCube::MOVE> shuffle_moves = cube.randomShuffleCube(numShuffleMoves);
-        for (auto move: shuffle_moves) cout << cube.getMove(move) << " ";
-        cout << "\n";
-        cube.print();
 
         cout << "Choose a solver (1 for DFS, 2 for BFS, 3 for IDDFS, 4 for IDA*): ";
         int solverChoice;
@@ -74,6 +60,17 @@ int main() {
 
             if (cubeModelChoice == 1) {
                 RubiksCube1dArray cube;
+                cube.print();
+
+                cout << "Enter the number of shuffling moves: ";
+                int numShuffleMoves;
+                cin >> numShuffleMoves;
+
+                vector<GenericRubiksCube::MOVE> shuffle_moves = cube.randomShuffleCube(numShuffleMoves);
+                for (auto move: shuffle_moves) cout << cube.getMove(move) << " ";
+                cout << "\n";
+                cube.print();
+
                 DFSSolver<RubiksCube1dArray, Hash1d> dfsSolver(cube, 8);
                 vector<GenericRubiksCube::MOVE> solve_moves = dfsSolver.solve();
 
@@ -83,6 +80,17 @@ int main() {
                 dfsSolver.rubiksCube.print();
             } else if (cubeModelChoice == 2) {
                 RubiksCube3dArray cube;
+                cube.print();
+
+                cout << "Enter the number of shuffling moves: ";
+                int numShuffleMoves;
+                cin >> numShuffleMoves;
+
+                vector<GenericRubiksCube::MOVE> shuffle_moves = cube.randomShuffleCube(numShuffleMoves);
+                for (auto move: shuffle_moves) cout << cube.getMove(move) << " ";
+                cout << "\n";
+                cube.print();
+
                 DFSSolver<RubiksCube3dArray, Hash3d> dfsSolver(cube, 8);
                 vector<GenericRubiksCube::MOVE> solve_moves = dfsSolver.solve();
 
@@ -92,6 +100,17 @@ int main() {
                 dfsSolver.rubiksCube.print();
             } else if (cubeModelChoice == 3) {
                 RubiksCubeBitboard cube;
+                cube.print();
+
+                cout << "Enter the number of shuffling moves: ";
+                int numShuffleMoves;
+                cin >> numShuffleMoves;
+
+                vector<GenericRubiksCube::MOVE> shuffle_moves = cube.randomShuffleCube(numShuffleMoves);
+                for (auto move: shuffle_moves) cout << cube.getMove(move) << " ";
+                cout << "\n";
+                cube.print();
+
                 DFSSolver<RubiksCubeBitboard, HashBitboard> dfsSolver(cube, 8);
                 vector<GenericRubiksCube::MOVE> solve_moves = dfsSolver.solve();
 
@@ -120,6 +139,17 @@ int main() {
 
             if (cubeModelChoice == 1) {
                 RubiksCube1dArray cube;
+                cube.print();
+
+                cout << "Enter the number of shuffling moves: ";
+                int numShuffleMoves;
+                cin >> numShuffleMoves;
+
+                vector<GenericRubiksCube::MOVE> shuffle_moves = cube.randomShuffleCube(numShuffleMoves);
+                for (auto move: shuffle_moves) cout << cube.getMove(move) << " ";
+                cout << "\n";
+                cube.print();
+
                 BFSSolver<RubiksCube1dArray, Hash1d> bfsSolver(cube, 8);
                 vector<GenericRubiksCube::MOVE> solve_moves = bfsSolver.solve();
 
@@ -129,6 +159,17 @@ int main() {
                 bfsSolver.rubiksCube.print();
             } else if (cubeModelChoice == 2) {
                 RubiksCube3dArray cube;
+                cube.print();
+
+                cout << "Enter the number of shuffling moves: ";
+                int numShuffleMoves;
+                cin >> numShuffleMoves;
+
+                vector<GenericRubiksCube::MOVE> shuffle_moves = cube.randomShuffleCube(numShuffleMoves);
+                for (auto move: shuffle_moves) cout << cube.getMove(move) << " ";
+                cout << "\n";
+                cube.print();
+
                 BFSSolver<RubiksCube3dArray, Hash3d> bfsSolver(cube, 8);
                 vector<GenericRubiksCube::MOVE> solve_moves = bfsSolver.solve();
 
@@ -138,6 +179,17 @@ int main() {
                 bfsSolver.rubiksCube.print();
             } else if (cubeModelChoice == 3) {
                 RubiksCubeBitboard cube;
+                cube.print();
+
+                cout << "Enter the number of shuffling moves: ";
+                int numShuffleMoves;
+                cin >> numShuffleMoves;
+
+                vector<GenericRubiksCube::MOVE> shuffle_moves = cube.randomShuffleCube(numShuffleMoves);
+                for (auto move: shuffle_moves) cout << cube.getMove(move) << " ";
+                cout << "\n";
+                cube.print();
+
                 BFSSolver<RubiksCubeBitboard, HashBitboard> bfsSolver(cube, 8);
                 vector<GenericRubiksCube::MOVE> solve_moves = bfsSolver.solve();
 
@@ -166,6 +218,17 @@ int main() {
 
             if (cubeModelChoice == 1) {
                 RubiksCube1dArray cube;
+                cube.print();
+
+                cout << "Enter the number of shuffling moves: ";
+                int numShuffleMoves;
+                cin >> numShuffleMoves;
+
+                vector<GenericRubiksCube::MOVE> shuffle_moves = cube.randomShuffleCube(numShuffleMoves);
+                for (auto move: shuffle_moves) cout << cube.getMove(move) << " ";
+                cout << "\n";
+                cube.print();
+
                 IDDFSSolver<RubiksCube1dArray, Hash1d> iddfsSolver(cube, 7);
                 vector<GenericRubiksCube::MOVE> solve_moves = iddfsSolver.solve();
 
@@ -175,6 +238,17 @@ int main() {
                 iddfsSolver.rubiksCube.print();
             } else if (cubeModelChoice == 2) {
                 RubiksCube3dArray cube;
+                cube.print();
+
+                cout << "Enter the number of shuffling moves: ";
+                int numShuffleMoves;
+                cin >> numShuffleMoves;
+
+                vector<GenericRubiksCube::MOVE> shuffle_moves = cube.randomShuffleCube(numShuffleMoves);
+                for (auto move: shuffle_moves) cout << cube.getMove(move) << " ";
+                cout << "\n";
+                cube.print();
+
                 IDDFSSolver<RubiksCube3dArray, Hash3d> iddfsSolver(cube, 7);
                 vector<GenericRubiksCube::MOVE> solve_moves = iddfsSolver.solve();
 
@@ -184,6 +258,17 @@ int main() {
                 iddfsSolver.rubiksCube.print();
             } else if (cubeModelChoice == 3) {
                 RubiksCubeBitboard cube;
+                cube.print();
+
+                cout << "Enter the number of shuffling moves: ";
+                int numShuffleMoves;
+                cin >> numShuffleMoves;
+
+                vector<GenericRubiksCube::MOVE> shuffle_moves = cube.randomShuffleCube(numShuffleMoves);
+                for (auto move: shuffle_moves) cout << cube.getMove(move) << " ";
+                cout << "\n";
+                cube.print();
+
                 IDDFSSolver<RubiksCubeBitboard, HashBitboard> iddfsSolver(cube, 7);
                 vector<GenericRubiksCube::MOVE> solve_moves = iddfsSolver.solve();
 
@@ -212,6 +297,17 @@ int main() {
 
             if (cubeModelChoice == 1) {
                 RubiksCube1dArray cube;
+                cube.print();
+
+                cout << "Enter the number of shuffling moves: ";
+                int numShuffleMoves;
+                cin >> numShuffleMoves;
+
+                vector<GenericRubiksCube::MOVE> shuffle_moves = cube.randomShuffleCube(numShuffleMoves);
+                for (auto move: shuffle_moves) cout << cube.getMove(move) << " ";
+                cout << "\n";
+                cube.print();
+
                 string fileName = "Databases/cornerDepth5V1.txt";
                 IDAstarSolver<RubiksCube1dArray, Hash1d> idaStarSolver(cube, fileName);
                 auto moves = idaStarSolver.solve();
@@ -223,6 +319,17 @@ int main() {
                 return 0;
             } else if (cubeModelChoice == 2) {
                 RubiksCube3dArray cube;
+                cube.print();
+
+                cout << "Enter the number of shuffling moves: ";
+                int numShuffleMoves;
+                cin >> numShuffleMoves;
+
+                vector<GenericRubiksCube::MOVE> shuffle_moves = cube.randomShuffleCube(numShuffleMoves);
+                for (auto move: shuffle_moves) cout << cube.getMove(move) << " ";
+                cout << "\n";
+                cube.print();
+
                 string fileName = "Databases/cornerDepth5V1.txt";
                 IDAstarSolver<RubiksCube3dArray, Hash3d> idaStarSolver(cube, fileName);
                 auto moves = idaStarSolver.solve();
@@ -233,8 +340,19 @@ int main() {
                 cout << "\n";
                 return 0;
             } else if (cubeModelChoice == 3) {
-                string fileName = "Databases/cornerDepth5V1.txt";
                 RubiksCubeBitboard cube;
+                cube.print();
+
+                cout << "Enter the number of shuffling moves: ";
+                int numShuffleMoves;
+                cin >> numShuffleMoves;
+
+                vector<GenericRubiksCube::MOVE> shuffle_moves = cube.randomShuffleCube(numShuffleMoves);
+                for (auto move: shuffle_moves) cout << cube.getMove(move) << " ";
+                cout << "\n";
+                cube.print();
+
+                string fileName = "Databases/cornerDepth5V1.txt";
                 IDAstarSolver<RubiksCubeBitboard, HashBitboard> idaStarSolver(cube, fileName);
                 auto moves = idaStarSolver.solve();
                 idaStarSolver.rubiksCube.print();
