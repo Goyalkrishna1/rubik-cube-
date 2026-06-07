@@ -27,3 +27,29 @@ Through this project, I explored different cube representations and compared the
 - Generic Rubik's Cube Interface
 
 - Scramble and Solve Functionality
+
+
+## Project Structure
+
+```text
+RubiksCubeSolver/
+│
+├── Model
+│   ├── RubiksCube1dArray.cpp
+│   ├── RubiksCube3dArray.cpp
+│   └── RubiksCubeBitboard.cpp
+│
+├── Solver
+│   ├── BFSSolver.h
+│   ├── DFSSolver.h
+│   ├── IDDFSSolver.h
+│   └── IDAstarSolver.h
+│
+├── PatternDatabases
+│   └── CornerPatternDatabase.h
+│
+├── Databases
+│   └── cornerDepth5V1.txt
+│
+└── main.cpp
+```
