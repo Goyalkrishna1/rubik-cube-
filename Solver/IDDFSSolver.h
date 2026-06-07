@@ -1,7 +1,6 @@
 #include<bits/stdc++.h>
 #include "../Model/GenericRubiksCube.h"
 #include "DFSSolver.h"
-
 #ifndef RUBIKS_IDDFSSOLVER_H
 #define RUBIKS_IDDFSSOLVER_H
 
@@ -22,7 +21,7 @@ public:
 
 //    Used DFSSolver with increasing max_search_depth
     vector<GenericRubiksCube::MOVE> solve() {
-        for (int i = 1; i <= max_search_depth; i++) {
+        for (int i = 1; i < max_search_depth + 1; i++) {
             DFSSolver<T, H> dfsSolver(rubiksCube, i);
             moves = dfsSolver.solve();
             if (dfsSolver.rubiksCube.isSolved()) {
@@ -32,8 +31,5 @@ public:
         }
         return moves;
     }
-
-
 };
-
 #endif //RUBIKS_IDDFSSOLVER_H

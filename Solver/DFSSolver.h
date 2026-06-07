@@ -1,12 +1,9 @@
 #include<bits/stdc++.h>
 #include "../Model/GenericRubiksCube.h"
-
 #ifndef RUBIKS_DFSSOLVER_H
 #define RUBIKS_DFSSOLVER_H
-
 // Typename T: RubiksCube Representation used (3d, 1d, Bitboard)
 // Typename H: Corresponding Hash function
-
 template<typename T, typename H>
 class DFSSolver {
 private:
@@ -18,7 +15,7 @@ private:
     bool dfs(int dep) {
         if (rubiksCube.isSolved()) return true;
         if (dep > max_search_depth) return false;
-        for (int i = 0; i < 18; i++) {
+        for (int i = 0; i <= 17; i++) {
             rubiksCube.move(GenericRubiksCube::MOVE(i));
             moves.push_back(GenericRubiksCube::MOVE(i));
             if (dfs(dep + 1)) return true;

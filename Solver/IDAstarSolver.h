@@ -2,11 +2,8 @@
 #include "../Model/GenericRubiksCube.h"
 //#include "../Model/PatternDatabase/PatternDatabase.h"
 #include "../PatternDatabases/CornerPatternDatabase.h"
-
-
 #ifndef RUBIKS_IDASTARSOLVER_H
 #define RUBIKS_IDASTARSOLVER_H
-
 template<typename T, typename H>
 class IDAstarSolver {
 private:
@@ -58,7 +55,7 @@ private:
 
             if (node.cube.isSolved()) return make_pair(node.cube, bound);
             node.depth++;
-            for (int i = 0; i < 18; i++) {
+            for (int i = 0; i <= 17; i++) {
                 auto curr_move = GenericRubiksCube::MOVE(i);
                 node.cube.move(curr_move);
                 if (!visited[node.cube]) {
@@ -75,7 +72,6 @@ private:
         }
         return make_pair(rubiksCube, next_bound);
     }
-
 public:
     T rubiksCube;
 
@@ -83,7 +79,6 @@ public:
         rubiksCube = _rubiksCube;
         cornerDB.fromFile(fileName);
     }
-
     vector<GenericRubiksCube::MOVE> solve() {
         int bound = 1;
         auto p = IDAstar(bound);

@@ -1,9 +1,7 @@
 #include<bits/stdc++.h>
 #include "../Model/GenericRubiksCube.h"
-
 #ifndef RUBIKS_BFSSOLVER_H
 #define RUBIKS_BFSSOLVER_H
-
 // Typename T: RubiksCube Representation used (3d, 1d, Bitboard)
 // Typename H: Corresponding Hash function
 
@@ -27,7 +25,7 @@ private:
             if (node.isSolved()) {
                 return node;
             }
-            for (int i = 0; i < 18; i++) {
+            for (int i = 0; i <= 17; i++) {
                 auto curr_move = GenericRubiksCube::MOVE(i);
                 node.move(curr_move);
                 if (!visited[node]) {
@@ -63,5 +61,4 @@ public:
         return moves;
     }
 };
-
 #endif //RUBIKS_BFSSOLVER_H
