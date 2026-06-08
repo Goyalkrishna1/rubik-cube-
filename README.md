@@ -71,6 +71,7 @@ Advantages:
 - More intuitive mapping to a real cube
 - Easier visualization
 
+
 ### Bitboard
 
 Stores cube information using bit manipulation.
@@ -78,3 +79,22 @@ Stores cube information using bit manipulation.
 Advantages:
 - Memory efficient
 - Faster state operations
+
+
+## Algorithms Implemented
+
+### DFS (Depth First Search)
+
+Explores states deeply before backtracking.
+
+### BFS (Breadth First Search)
+
+Explores states level by level and guarantees the shortest solution.
+
+### IDDFS (Iterative Deepening DFS)
+
+Combines DFS memory efficiency with BFS optimality.
+
+### IDA* (Iterative Deepening A*)
+
+Uses heuristic information to reduce the search space and solves the cube more efficiently.
