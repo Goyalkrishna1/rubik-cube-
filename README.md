@@ -53,3 +53,28 @@ RubiksCubeSolver/
 │
 └── main.cpp
 ```
+## Cube Representations
+
+### 1D Array
+
+Stores all stickers in a single array.
+
+Advantages:
+- Simple implementation
+- Easy indexing
+
+### 3D Array
+
+Represents the cube as a 3D structure.
+
+Advantages:
+- More intuitive mapping to a real cube
+- Easier visualization
+
+### Bitboard
+
+Stores cube information using bit manipulation.
+
+Advantages:
+- Memory efficient
+- Faster state operations
