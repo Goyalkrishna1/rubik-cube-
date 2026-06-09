@@ -98,3 +98,14 @@ Combines DFS memory efficiency with BFS optimality.
 ### IDA* (Iterative Deepening A*)
 
 Uses heuristic information to reduce the search space and solves the cube more efficiently.
+
+## Pattern Database Heuristic
+
+To improve the performance of IDA*, I implemented a Corner Pattern Database.
+
+The pattern database stores precomputed distances for corner configurations and provides an admissible heuristic.
+
+Benefits:
+- Faster solving
+- Reduced search space
+- Better scalability
