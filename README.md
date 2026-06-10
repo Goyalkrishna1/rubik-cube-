@@ -123,3 +123,57 @@ This project helped me understand:
 - Bit manipulation
 - Memory-performance tradeoffs
 - Object-oriented design in C++
+
+### Solver
+
+The `Solver` directory contains search algorithms used to solve the cube.
+
+#### DFS Solver
+Performs depth-first exploration of the state space.
+
+Characteristics:
+- Low memory usage
+- Does not guarantee shortest solution
+
+#### BFS Solver
+Performs breadth-first exploration.
+
+Characteristics:
+- Guarantees shortest solution
+- High memory consumption
+
+#### IDDFS Solver
+Combines DFS and BFS properties.
+
+Characteristics:
+- Optimal solution
+- Better memory efficiency than BFS
+
+#### IDA* Solver
+Uses iterative deepening with heuristic guidance.
+
+Characteristics:
+- Memory efficient
+- Significantly faster than uninformed search
+- Suitable for larger search depths
+
+### Main Program
+
+#### main.cpp
+
+Acts as the entry point of the application.
+
+Responsibilities:
+- Cube initialization
+- Cube scrambling
+- Solver selection
+- Solution execution
+- Output display
+
+---
+
+### Build Configuration
+
+#### CMakeLists.txt
+
+Handles project compilation and dependency management using CMake.
