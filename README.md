@@ -2,7 +2,9 @@
 
 A Rubik's Cube Solver implemented in C++ using multiple cube representations and search algorithms such as BFS, DFS, IDDFS and IDA*.
 
-
+## Demo Video
+  https://github.com/user-attachments/assets/3227cee5-82f4-47d8-9bfb-90581b7e78cc
+  
 ## Why I Built This Project ?
 
 I wanted to understand how search algorithms work in real-world problems. The Rubik's Cube is a classic state-space search problem, making it a great way to learn about graph traversal, heuristics, optimization techniques, data structures and algorithms with their implementation.
