@@ -109,3 +109,15 @@ Benefits:
 - Faster solving
 - Reduced search space
 - Better scalability
+
+## What I Learned
+
+This project helped me understand:
+
+- State space search
+- Graph traversal algorithms
+- Heuristic search
+- Pattern databases
+- Bit manipulation
+- Memory-performance tradeoffs
+- Object-oriented design in C++
